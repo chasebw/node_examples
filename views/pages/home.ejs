@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="javascript/home.js"></script>
+    <style>
+
+table {
+    background-color: white;
+    font-size: calc(6px + 1vw);
+    font-weight: 400;
+  }
+  .table-hover>tbody>tr:hover {
+    background-color: #a5c2bd;
+  }
+  td{ 
+    border-color: black;
+    border-style: groove;
+    padding: 8px;
+    background-color: #dce0dd;
+    box-shadow: 4px 6px black;
+  }
+
+  table {
+    border-collapse: collapse;
+    margin: auto;
+  }
+
+    </style>
+
+</head>
+<body>
+
+    <button onclick="grab_products()">Click Me!</button>
+    <button onclick="erase()">Remove list</button>
+    <button onclick="randomCard()">Random Card</button>
+    <button onclick="removeCard()">Remove Card</button>
+    <h1>Database Products</h1>
+    <p id="table"></p>
+    <p id="picture"></p>
+    
+    
+</body>
+</html>
