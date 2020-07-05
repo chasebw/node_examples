@@ -39,10 +39,22 @@ table {
     <button onclick="erase()">Remove list</button>
     <button onclick="randomCard()">Random Card</button>
     <button onclick="removeCard()">Remove Card</button>
+
+    <h1>Set Max Price:</h1>
+    <form >
+      <select name="price" id="price" onchange="maxPrice()">
+        <option value="50.00">$50.00</option>
+        <option value="100.00">$100.00</option>
+        <option value="500.00">$500.00</option>
+        <option value="1000.00">$1000.00</option>
+        <option value="2000.00">$2000.00</option>
+        <option value="5000.00">$5000.00</option>
+      </select>
+      </form>
+
     <h1>Database Products</h1>
     <p id="table"></p>
     <p id="picture"></p>
-    
-    
+
 </body>
 </html>

@@ -37,7 +37,53 @@ function grab_products()
       //CART CLICK AJAX END
     }//cartPopup on click
 
-    
+/****************************
+ * Query Database AJAX Request - Pass Data
+ ****************************/
+function maxPrice()
+{
+  console.log('maxPrice() run');
+  
+  data = {};
+  const priceName = $('#price').attr('name');
+  const priceValue = $('#price').val();
+  data[priceName] = priceValue;
+  
+  $.ajax({
+    url: '/maxPrice',
+    type: 'POST',
+    dataType: 'json', //will parse json into javascript object
+    data:data,
+    //callback called when suceed
+    success: (data) => {
+      console.log('ajax success!', data);
+         product = "";
+         product = "<table>";
+        
+      $.each(data, function (index, value) {
+        
+        
+        product += "<tr>";
+        product += "<td>"+ this.product_name +"</td>";
+        product += "<td>"+ this.product_description + "</td>";
+        product += "<td>" + "$" + this.price+ "</td>";
+        product += "</tr>";
+      });// END LOOP
+       
+        product += "</table>";
+    //added end
+      result = "";
+      result = product;
+      //select status id element display in html
+      $('#table').html(result);
+    }//sucess data call
+  });//ajax function call
+  //CART CLICK AJAX END
+}//cartPopup on click
+
+
+
+
     //Erase 
     function erase(){
 
