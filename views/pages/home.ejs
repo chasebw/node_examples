@@ -1,60 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="javascript/home.js"></script>
-    <style>
-
-table {
-    background-color: white;
-    font-size: calc(6px + 1vw);
-    font-weight: 400;
-  }
-  .table-hover>tbody>tr:hover {
-    background-color: #a5c2bd;
-  }
-  td{ 
-    border-color: black;
-    border-style: groove;
-    padding: 8px;
-    background-color: #dce0dd;
-    box-shadow: 4px 6px black;
-  }
-
-  table {
-    border-collapse: collapse;
-    margin: auto;
-  }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Node Example Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <script src="javascript/home.js"></script>
 </head>
-<body>
+  <body>
 
-    <button onclick="grab_products()">Click Me!</button>
-    <button onclick="erase()">Remove list</button>
-    <button onclick="randomCard()">Random Card</button>
-    <button onclick="removeCard()">Remove Card</button>
+  <!-- 
+  _____________________________________________
+    
+  JumbroTron
+  _____________________________________________
+  -->
+    
+  <div class="jumbotron text-center">
+    <h1>Node Example</h1>
+    <p><u>This is an example page.</u>
+      This page can load products from a database, and it can
+      load a card from an API.</p>
+    <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+  </div>
 
-    <h1>Set Max Price:</h1>
-    <form >
-      <select name="price" id="price" onchange="maxPrice()">
-        <option value="50.00">$50.00</option>
-        <option value="100.00">$100.00</option>
-        <option value="500.00">$500.00</option>
-        <option value="1000.00">$1000.00</option>
-        <option value="2000.00">$2000.00</option>
-        <option value="5000.00">$5000.00</option>
-      </select>
-      </form>
 
-    <h1>Database Products</h1>
-    <p id="table"></p>
-    <p id="picture"></p>
+  <!-- 
+  _____________________________________________
+    
+  Code Buttons
+  _____________________________________________
+  -->
+
+  <div class="text-center">
+    <button class="btn btn-info" onclick="grab_products()">Show All Products</button>
+    <button class="btn btn-info" onclick="randomCard()">Random Card</button>
+    <button class="btn btn-danger" onclick="erase()">Clear All</button>
+  </div>
+
+  <hr>
+
+  <div class="text-center" max-width="200px">
+  <h1>Set Max Price:</h1>
+  <br>
+  <form>
+    <select class="form-control" name="price" id="price" onchange="maxPrice()">
+      <option value="50.00">$50.00</option>
+      <option value="100.00">$100.00</option>
+      <option value="500.00">$500.00</option>
+      <option value="1000.00">$1000.00</option>
+      <option value="2000.00">$2000.00</option>
+      <option value="5000.00">$5000.00</option>
+    </select>
+  </form>
+</div>
+<br><br>
+
+<hr>
+
+  <!-- 
+  _____________________________________________
+    
+  Output
+  _____________________________________________
+  -->
+
+<div class="text-center">
+  <h1>Results:</h1>
+  <p id="results"></p>
+</div>
+
+
 
 </body>
 </html>

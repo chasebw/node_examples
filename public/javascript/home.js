@@ -14,7 +14,8 @@ function grab_products()
         success: (data) => {
           console.log('ajax success!', data);
              product = "";
-             product = "<table>";
+             product += "<table class='table table-hover table-bordered table-striped'>";
+             product += "<tr><th>Product Name</th><th>Description</th><th>Price</th></tr>";
             
           $.each(data, function (index, value) {
             
@@ -31,7 +32,7 @@ function grab_products()
           result = "";
           result = product;
           //select status id element display in html
-          $('#table').html(result);
+          $('#results').html(result);
         }//sucess data call
       });//ajax function call
       //CART CLICK AJAX END
@@ -58,7 +59,8 @@ function maxPrice()
     success: (data) => {
       console.log('ajax success!', data);
          product = "";
-         product = "<table>";
+         product += "<table class='table table-hover'>";
+         product += "<tr><th>Product Name</th><th>Description</th><th>Price</th></tr>";
         
       $.each(data, function (index, value) {
         
@@ -75,7 +77,7 @@ function maxPrice()
       result = "";
       result = product;
       //select status id element display in html
-      $('#table').html(result);
+      $('#results').html(result);
     }//sucess data call
   });//ajax function call
   //CART CLICK AJAX END
@@ -88,7 +90,7 @@ function maxPrice()
     function erase(){
 
         result = "";
-        $('#table').html(result);
+        $('#results').html(result);
     }
 
 
@@ -116,7 +118,7 @@ API Ajax Request
         
 
            
-          $('#picture').html(newhtml);
+          $('#results').html(newhtml);
         }//sucess data call
       });//ajax function call
       //CART CLICK AJAX END
@@ -126,5 +128,5 @@ API Ajax Request
     function removeCard(){
 
       result = "";
-        $('#picture').html(result);
+        $('#results').html(result);
     }

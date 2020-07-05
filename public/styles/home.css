@@ -1,0 +1,12 @@
+table {
+    background-color: white;
+    font-size: calc(6px + 1vw);
+    font-weight: 400;
+    margin: 20px 15px;
+  }
+
+  select {
+  max-width: 500px;
+  margin: auto;
+
+  }
