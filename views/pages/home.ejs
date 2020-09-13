@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/home.css">
   <script src="javascript/home.js"></script>
+
 </head>
-  <body>
+
+<body>
 
   <!-- 
   _____________________________________________
@@ -18,7 +20,7 @@
   JumbroTron
   _____________________________________________
   -->
-    
+
   <div class="jumbotron text-center">
     <h1>Node Example</h1>
     <p><u>This is an example page.</u>
@@ -44,22 +46,22 @@
   <hr>
 
   <div class="text-center" max-width="200px">
-  <h1>Set Max Price:</h1>
-  <br>
-  <form>
-    <select class="form-control" name="price" id="price" onchange="maxPrice()">
-      <option value="50.00">$50.00</option>
-      <option value="100.00">$100.00</option>
-      <option value="500.00">$500.00</option>
-      <option value="1000.00">$1000.00</option>
-      <option value="2000.00">$2000.00</option>
-      <option value="5000.00">$5000.00</option>
-    </select>
-  </form>
-</div>
-<br><br>
+    <h1>Set Max Price:</h1>
+    <br>
+    <form>
+      <select class="form-control" name="price" id="price" onchange="maxPrice()">
+        <option value="50.00">$50.00</option>
+        <option value="100.00">$100.00</option>
+        <option value="500.00">$500.00</option>
+        <option value="1000.00">$1000.00</option>
+        <option value="2000.00">$2000.00</option>
+        <option value="5000.00">$5000.00</option>
+      </select>
+    </form>
+  </div>
+  <br><br>
 
-<hr>
+  <hr>
 
   <!-- 
   _____________________________________________
@@ -68,12 +70,18 @@
   _____________________________________________
   -->
 
-<div class="text-center">
-  <h1>Results:</h1>
-  <p id="results"></p>
-</div>
+  <div class="text-center">
+    <h1>Results:</h1>
+    <p id="results"></p>
+  </div>
+  <button onclick="generateDartBoard()"> My button</button>
+  <div id="svg-holder">
+    
+  </div>
+
 
 
 
 </body>
+
 </html>

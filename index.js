@@ -13,6 +13,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
 const connectionString = process.env.DATABASE_URL || 'postgres://aekyixapmzfhvg:66b98f4878b23dd6e133b5515e2c3fc27b4ad17fa4b2c8ec9a8be8ca7725ed8b@ec2-35-172-73-125.compute-1.amazonaws.com:5432/det1gl7rk0svq7?ssl=true';
 const pool = new Pool({connectionString: connectionString});
 
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.urlencoded({extended:true}))//support url encoded bodies
@@ -22,6 +23,7 @@ express()
   .get('/products', ProductController.getProducts) //Returns JSON
   .post('/maxPrice',ProductController.maxPrice)
   .get('/home',(req,res) => res.render("pages/home")) 
+  .get('/dart',(req,res) => res.render("pages/dart"))
   .get('/getCard',(req,res) => {
 
 

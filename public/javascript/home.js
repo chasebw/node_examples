@@ -2,7 +2,7 @@
 /****************************
  * Query Database AJAX Request
  ****************************/
-function grab_products()
+function generateTable()
     {
       console.log('checkout run');
       

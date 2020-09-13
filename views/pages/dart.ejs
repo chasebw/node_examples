@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="javascript/dartboard.js"></script>
+    <script src="javascript/table.js"></script>
+
+
+    <Style>
+        .polys {
+            fill: transparent;
+            stroke: transparent;
+        }
+
+        svg {
+            display: block;
+            margin: auto;
+        }
+
+
+        .polys:hover {
+            fill: grey;
+            color: grey;
+
+        }
+    </Style>
+
+</head>
+
+<body onload="generateDartBoard(),generateTable()">
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Costs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Unable</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+
+    <!-- Title
+    <div class="text-center">
+        <h1>Data:</h1>
+        <p id="results"></p>
+    </div>
+-->
+
+    <!-- Dart Board-->
+    <div id="svg-holder">
+    </div>
+
+    <!-- Table-->
+    <div id="results">
+    </div>
+
+
+
+</body>
+
+</html>
